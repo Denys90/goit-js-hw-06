@@ -5,5 +5,5 @@ textInput.addEventListener("blur", (event) => {
     textInput.classList.remove("invalid");
     return textInput.classList.add("valid");
   }
-  // return textInput.classList.add("invalid");
+  return textInput.classList.add("invalid");
 });
