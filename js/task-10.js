@@ -30,14 +30,13 @@ function onCreateCollectionOfBoxes() {
   let arreyBoxes = [];
 
   const numberBox = refs.input.value;
-  const boxColor = getRandomHexColor();
 
   for (let i = 0; i < numberBox; i += 1) {
     const newbox = document.createElement("div");
 
     newbox.style.width = `${30 + i * 10}px`;
     newbox.style.height = `${30 + i * 10}px`;
-    newbox.style.backgroundColor = boxColor;
+    newbox.style.backgroundColor = getRandomHexColor();
 
     arreyBoxes.push(newbox);
   }

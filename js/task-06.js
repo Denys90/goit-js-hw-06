@@ -10,7 +10,10 @@ const refs = {
 refs.input.addEventListener("blur", onColorInvalid);
 
 function onColorInvalid(e) {
-  if (e.target.value.length === Number(refs.input.dataset.length)) {
+  const inputValue = e.target.value.length;
+  const testValue = Number(refs.input.dataset.length);
+
+  if (inputValue === testValue) {
     refs.input.classList.add("valid");
     refs.input.classList.remove("invalid");
   } else {

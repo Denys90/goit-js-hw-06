@@ -8,5 +8,9 @@ const refs = {
 refs.input.addEventListener("input", onChangeInput);
 
 function onChangeInput(e) {
-  refs.span.textContent = e.currentTarget.value;
+  if (refs.input.value) {
+    refs.span.textContent = e.currentTarget.value;
+  } else {
+    refs.span.textContent = "Anonymous";
+  }
 }

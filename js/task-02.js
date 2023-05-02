@@ -10,11 +10,11 @@ const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Con
 
 const onFindUl = document.querySelector("#ingredients");
 
-const items = ingredients.map((e) => {
-  const creatLi = document.createElement("li");
-  creatLi.textContent = e;
-  creatLi.classList.add("item");
-  return creatLi;
+const markup = ingredients.map((ingredient) => {
+  const createLi = document.createElement("li");
+  createLi.textContent = ingredient;
+  createLi.classList.add("item");
+  return createLi;
 });
 
-onFindUl.append(...items);
+onFindUl.append(...markup);
